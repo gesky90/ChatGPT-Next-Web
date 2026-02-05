@@ -1,0 +1,35 @@
+project:
+  name: "REPLACE_ME_project_name"
+  seed: 42
+
+data:
+  input_path: "REPLACE_ME_data_path"
+  format: "tsv"  # csv | tsv | parquet
+  id_column: "eid"
+
+analysis:
+  outcome:
+    type: "binary"  # continuous | binary | survival
+    column: "REPLACE_ME_outcome_column"
+    time_column: "REPLACE_ME_followup_time_column"    # survival时必填
+    event_column: "REPLACE_ME_event_column"           # survival时必填
+
+  exposure:
+    columns:
+      - "REPLACE_ME_exposure_1"
+
+  covariates:
+    columns:
+      - "REPLACE_ME_covariate_1"
+      - "REPLACE_ME_covariate_2"
+
+  options:
+    standardize_numeric: true
+    dropna_strategy: "modelwise"   # modelwise | complete_case
+    min_rows: 200
+
+output:
+  table_dir: "outputs/tables"
+  model_dir: "outputs/models"
+  figure_dir: "outputs/figures"
+  log_file: "logs/pipeline.log"

@@ -1,0 +1,20 @@
+fields:
+  rename_map:
+    "REPLACE_ME_raw_col_1": "REPLACE_ME_std_col_1"
+    "REPLACE_ME_raw_col_2": "REPLACE_ME_std_col_2"
+
+  missing_codes:
+    - -1
+    - -3
+    - 999
+    - ""
+
+  category_maps:
+    sex:
+      0: "female"
+      1: "male"
+
+  numeric_bounds:
+    bmi:
+      lower: 10
+      upper: 80
